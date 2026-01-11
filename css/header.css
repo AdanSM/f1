@@ -2,7 +2,7 @@ header{
     border-bottom: 0px solid var(--color-primary);
     padding: 15px 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.482);
+    background-color: rgba(0, 0, 0, 0.217);
     border-radius: 10px;
     position: absolute;
     top:0;
@@ -121,8 +121,8 @@ header{
 
 
     @media (max-width: 992px){
-        padding: 15px;
-
+            padding: 15px;
+        
         .header-expand{
             .container-logo{
             flex: 1;

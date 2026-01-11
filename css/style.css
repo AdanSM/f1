@@ -22,15 +22,17 @@
     font-style: normal;
 }
 body{
-    background-color: #002557;
+    background-color: #002657;
     color: var(--color-light);
     font-family: F1;
-   *,
-*::before,
-*::after{
-    box-sizing: border-box;
+    top: 0;
+    padding: 0;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 .container-logo{
@@ -39,6 +41,8 @@ body{
     align-items: center;
     gap: 20px;
     text-decoration: none;
+
+;
 
     img{
         width: 100px;
