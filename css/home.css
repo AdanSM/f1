@@ -8,7 +8,6 @@ body{
    ============================ */
 
 .hero-banner{
-    background-image: url(../img/f1.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -49,7 +48,7 @@ body{
         letter-spacing: -1px;
         line-height: 1.1;
         font-weight: 800;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
         color: var(--color-light);
 
         span{
@@ -234,12 +233,13 @@ body{
             object-fit: cover;
             border-radius: 999px;
             transition: .5s;
+                            box-shadow: 0px 0px 0px 3px rgb(255, 255, 255);
 
         }
 
     .main-image:hover{
-                border: 2px solid rgb(255, 162, 0);
-                box-shadow: 0px 0px 30px rgb(255, 251, 0);
+                box-shadow: 0px 10px 5px 5px rgb(255, 255, 255);
+                transform: translateZ(40px) scale(1.03) rotateX(5deg);
         }
 
         .card-inf{
@@ -427,51 +427,43 @@ body{
             }
 
             .McLaren{
-                border:5px solid #FF8700;
                 position: relative;
-                transition:bottom .5s;
-                bottom: 0;
-
+                transition: all 0.2s ease;
             }
             .McLaren:hover{
-                box-shadow: 0 0 25px #FF8700;
-                bottom: 7px;
+                box-shadow: 0 0 35px #838383;
+                transform: translateZ(30px) scale(1.05);
             }
 
 
             .Red-Bull{
-                border:5px solid #1E41FF;
                 position: relative;
-                transition:bottom .5s;
-                bottom: 0;
+                transition: all 0.2s ease;
             }
             .Red-Bull:hover{
-                box-shadow: 0 0 25px #1E41FF;
-                bottom: 7px;
+                box-shadow: 0 0 35px #838383;
+                transform: translateZ(30px) scale(1.05);
             }
 
 
             .Mercedes{
-                border:5px solid #00D2BE;
                 position: relative;
-                transition:bottom .5s;
-                bottom: 0;
+                transition: all 0.2s ease;
             }
             .Mercedes:hover{
-                box-shadow: 0 0 25px #00D2BE;
-                bottom: 7px;
+                box-shadow: 0 0 35px #838383;
+                transform: translateZ(30px) scale(1.05);
             }
 
 
             .Scuderia-Ferrari{
-                border:5px solid #FF2800;
                 position: relative;
-                transition:bottom .5s;
-                bottom: 0;
+                transition: all 0.2s ease;
             }
+
             .Scuderia-Ferrari:hover{
-                box-shadow: 0 0 25px #FF2800;
-                bottom: 7px;
+                box-shadow: 0 0 35px #838383;
+                transform: translateZ(30px) scale(1.05);
             }
 
             .dish-info{
@@ -510,7 +502,7 @@ body{
     }
 
 
-    @media (max-width:992) {
+    @media (max-width:992px) {
         .content{
             .container-dishes{
                 grid-template-columns: repeat(2,1fr);
@@ -565,11 +557,10 @@ body{
    ============================ */
 .section-daily-offers{
 
-    background-image: url(/img/f1\ \(1\).png);
+    background-image: url(/img/f1.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
 
     & > div{
         display: flex;
@@ -584,18 +575,19 @@ body{
 
             img {
             width:  70%;
-            margin-left: px;
             border-radius: 99px;
             height: auto;
             display: block;
-            object-fit: contain;}
+            object-fit: contain;
+            margin-left: 20px;
+        }
 
         .card-inf{
             display: flex;
             flex-direction: column;
             gap: 15px;
 
-            background: linear-gradient(135deg, #ff0000, #ffc400);
+            background: linear-gradient(135deg, #ff0000, #fff700);
             padding: 15px;
             border-radius: 25px;
             color: var(--color-light);
@@ -730,7 +722,7 @@ body{
                 gap: 5px;
 
                 h3{
-                    font-size: 18px;
+                    font-size: 14px;
                 }
 
                 ul{
@@ -744,9 +736,216 @@ body{
                         span{
                             font-size: 14px;
                         }
+                        
                     }
                 }
             }
         }
     }
 }
+
+/*section estadisticas*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    h2{
+        text-align: center;
+        width: 60%;
+    }
+
+    .title-estadisticas{
+        font-size: 40px;
+
+        .temp{
+            color: #ff0000;
+        }
+    }
+
+
+        .container-tabs{
+        margin: 60px 0;
+        background-color: #ffffff;
+        padding: 20px 40px;
+        border-radius: 30px;
+
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        button{
+            background: none;
+            border: none;
+            color: var(--color-light);
+            font-weight: 700;
+            font-size: 17px;
+            position: relative;
+            cursor: pointer;
+            color: black;
+
+
+            &::after{
+                content: '';
+                position: absolute;
+                top:10px;
+                right: -20px;
+                transform: translateY(-50%);
+
+                width: 7px;
+                height: 7px;
+                border-radius: 999px;
+                background-color: #ffffff;
+            }
+
+            &:last-child::after{
+                display: none;
+            }
+
+            &.active{
+                color: rgb(255, 0, 0);
+            }
+
+        }
+    }
+
+    .container-dishes{
+        display: none;
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        width: 100%;
+
+        &.active{
+            display: grid;
+        }
+
+        .container-img{
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 999px;
+                object-fit: cover;
+            }
+        }
+
+        .container-dish{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .info-dish{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .row{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                        h3{
+                        color: var(--color-light);
+                        font-size: 20px;
+                        text-transform: uppercase;
+                    }
+
+
+                    .divider{
+                        flex-grow: 1; 
+                        height: 1px;
+                        background-color: var(--color-light); 
+                        opacity: 0.3;
+                        align-self: center;
+                    }
+
+                    span{
+                        background-color:white;
+                        color:black;
+                        font-size: 13px;
+                        font-weight: 800;
+                        padding: 5px 25px;
+                        border-radius: 999px;
+                        text-align: center;
+                        
+                    }
+                }
+
+                p{
+                    font-size: 15px;
+                    color: rgba(255, 255, 255, 0.621);
+                }
+            }
+        }
+    }
+
+
+    @media (max-width:992px){
+        .container-tabs{
+            padding: 15px 10px;
+            margin: 30px 0;
+            overflow-x: auto;
+
+            .tab{
+                flex:1;
+            }
+        }
+
+
+        .container-dishes{
+            &.active{
+                grid-template-columns: 1fr;
+            }
+
+            .info-dish{
+                width: 100%;
+
+                .row{
+                    justify-content: space-between;
+
+                        h3{
+                        font-size: 16px;
+                    }
+
+                    .divider{
+                        width: 50px;}
+                }
+            }
+        }
+    }
+
+    @media (max-width:768px){
+        .container-tabs{
+            padding: 10px 15px;
+            gap: 30px;
+
+            .tab{
+                font-size: 12px;
+            }
+        }
+
+
+        .container-dishes{
+
+            .info-dish{
+
+                .row{
+                    h3{
+                        font-size: 14px;
+                    }
+                }
+                    p{
+                        font-size: 16px;
+                }
+            }
+        }
+    }   
+}
+
+
+
+

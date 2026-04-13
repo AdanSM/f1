@@ -2,7 +2,7 @@ header{
     border-bottom: 0px solid var(--color-primary);
     padding: 15px 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.217);
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
     position: absolute;
     top:0;
@@ -144,6 +144,7 @@ header{
 
 
 header:hover{
-    box-shadow: 5px 5px 2cqh #ffffff37 ;
+    box-shadow: 5px 5px 2cqh #000000d7 ;
+    padding-bottom:2% ;
 }
 
