@@ -11,14 +11,16 @@
 }
 @font-face {
     font-family: "F1";
-    src: url(/fonts/Formula1-Bold-4.ttf) format("truetype");
+    /* Usamos ../ para asegurar que busque la carpeta fonts desde la raíz del proyecto */
+    src: url("../fonts/Formula1-Bold-4.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: "F1-R";
-    src: url(/fonts/Formula1-Regular-1.ttf) format("truetype");
-    font-weight: 700;
+    src: url("../fonts/Formula1-Regular-1.ttf") format("truetype");
+    font-weight: 400; /* Cambiado a 400 por ser la versión Regular */
     font-style: normal;
 }
 body{
