@@ -962,8 +962,8 @@ body{
         padding: 0;
 
     }
-
     background-image: url(/img/f1\ \(1\).png);
+
     background-size: cover;       /* PC: llena toda la sección */
     background-position: center;
     background-repeat: no-repeat;
