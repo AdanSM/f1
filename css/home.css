@@ -385,7 +385,7 @@ body{
 
 }
 /* ============================
-            main dishes
+            ESCUDERIAS
    ============================ */
 .section-main-dishes{
     .content{
@@ -553,7 +553,7 @@ body{
 }
 
 /* ============================
-            mejor piloto
+            MEJOR PILOTO
    ============================ */
 .section-daily-offers{
 
@@ -744,7 +744,9 @@ body{
     }
 }
 
-/*section estadisticas*/
+/* ============================
+            ESTDISTICAS
+   ============================ */
 
 .content{
     display: flex;
@@ -946,6 +948,196 @@ body{
     }   
 }
 
+/* ============================
+            MEJOR AUTO
+   ============================ */
 
+.section-our-monoplaza{
+    & > div{
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        color: black;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    background-image: url(/img/f1\ \(1\).png);
+    background-size: cover;       /* PC: llena toda la sección */
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    .container-img{
+        flex: 1;
+        position: relative;
+
+        .main-image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 999px;
+        }
+
+        .card-customers{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            background-color: var(--color-primary);
+            width: 50%;
+            height: 170px;
+            padding: 2px;
+            border-radius: 15px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px ;
+
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #FF8700);
+            margin-top: -10px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #828282;
+            will-change: transform;
+            z-index: 1;
+
+            p{
+                font-size: 18px;
+                color: black;
+                font-weight: 800;
+                text-align: center;
+            }
+
+            .images-customers{
+                position: relative;
+                width: 100%;
+                gap: 100%;
+
+
+
+
+
+                    span{
+                        position: absolute;
+                        left: 90px;
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 999px;
+                        border: 1px solid var(--color-light);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--dark-color-divider);
+
+                        i{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    
+
+        .content{
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p{
+                font-size: 18px;
+                line-height: 1.4;
+            }
+
+            .container-options{
+                display: flex;
+                grid-template-columns: repeat(3,1fr);
+                gap: 20px;
+                margin: 35px 0;
+            }
+
+            .container-option{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+
+                i{
+                    font-size: 32px;
+                }
+
+                h3{
+                    font-size: 22px;
+                    color: black;
+                    font-weight: 700;
+                    width: 65%;
+                    text-align: center;
+                }
+            }
+        }
+        .container-button{
+            align-self: flex-start;
+        }
+
+@media (max-width: 992px) {
+    & > div {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+
+    
+    .container-img {
+        order: 2; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .main-image {
+            width: 80%; 
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .car-line {
+            width: 70%;
+            margin-top: 5px;
+        }
+    }
+
+    .content {
+        order: 1;
+        
+        .title {
+            font-size: 2rem;
+        }
+
+        .container-options {
+            grid-template-columns: 1fr; 
+            gap: 25px;
+            
+            .container-option {
+                align-items: center;
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+        .container-button {
+            align-self: center;
+        }
+    }
+
+
+    
+}
 
 
