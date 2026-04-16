@@ -557,12 +557,6 @@ body{
             MEJOR PILOTO
    ============================ */
 .section-daily-offers{
-
-    background-image: url(/img/f1.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
     & > div{
         display: flex;
         align-items: center;
@@ -574,21 +568,26 @@ body{
         flex: 1;
         position: relative;
 
+        
+
             img {
-            width:  60%;
+            width: 70%;
             border-radius: 99px;
             height: auto;
             display: block;
             object-fit: contain;
-            margin-left: 20px;
+            margin-left: 10PX;
+
         }
+
+        
 
         .card-inf{
             display: flex;
             flex-direction: column;
             gap: 15px;
 
-            background: linear-gradient(135deg, #ff0000, #fff700);
+            background: linear-gradient(135deg, #006aff, #0e007a);
             padding: 15px;
             border-radius: 25px;
             color: var(--color-light);
@@ -605,7 +604,7 @@ body{
                 gap: 2px;
 
                 i{
-                    color:#ffe100;
+                    color:#ffffff;
                     font-size: 12px;
                 }
             }
@@ -715,7 +714,7 @@ body{
 
         .container-images{
             img{
-                width: 100%;
+                width: 90%;
             }
 
             .card-inf{
@@ -754,7 +753,7 @@ body{
     flex-direction: column;
     gap: 10px;
     align-items: center;
-}
+
 
 .content h2{
     text-align: center;
@@ -936,6 +935,7 @@ body{
     .info-dish p{
         font-size: 12px;
     }
+}
 }
 /* ============================
             MEJOR AUTO

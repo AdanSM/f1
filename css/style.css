@@ -34,8 +34,10 @@ body{
     font-style: normal;
 }
 
-
-
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 *,
 *::before,
