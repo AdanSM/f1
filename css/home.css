@@ -1,14 +1,10 @@
 
-body{
-    margin: 0;
-    padding: 0;
-
-}
 /* ============================
             HERO BANNER
    ============================ */
 
 .hero-banner{
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -212,16 +208,19 @@ body{
     }
 }
 /* ============================
-            ABAUT US
+            CAMPEON
    ============================ */
 
 .section-abaut{
+    padding: 15px;
     margin-top: 100px;
     & > div{
         display: flex;
         align-items: center;
         gap: 120px;
     }
+
+    
 
     .container-images{
         flex: 1;
@@ -258,7 +257,6 @@ body{
             padding: 20px;
 
             i{
-                color: var(--color-light);
                 font-size: 26px;
             }
 
@@ -298,13 +296,6 @@ body{
             gap: 10px;
             align-items: center;
 
-                i{
-                    font-size: 18px;
-                    color: #333;
-                    background-color: var(--color-primary);
-                    padding: 5px;
-                    border-radius: 999px;
-                }
 
                 span{
                     font-size: 18px;
@@ -316,6 +307,15 @@ body{
             display: flex;
             gap: 20px;
             align-items: center;
+
+            .btn-secondary{
+                color: white;
+            }
+
+            .btn-secondary:hover{
+                background: white;
+                color: black;
+            }
         }
     }
 
@@ -388,7 +388,8 @@ body{
 /* ============================
             ESCUDERIAS
    ============================ */
-.section-main-dishes{
+.section-escu-25{
+    padding: 15px;
     .content{
         display: flex;
         flex-direction: column;
@@ -556,7 +557,8 @@ body{
 /* ============================
             MEJOR PILOTO
    ============================ */
-.section-daily-offers{
+.section-mejor-piloto{
+    padding: 15px;
     & > div{
         display: flex;
         align-items: center;
@@ -661,14 +663,6 @@ body{
             gap: 10px;
             align-items: center;
 
-                i{
-                    font-size: 18px;
-                    color: #333;
-                    background-color: var(--color-primary);
-                    padding: 5px;
-                    border-radius: 999px;
-                }
-
                 span{
                     font-size: 18px;
                 }
@@ -679,6 +673,15 @@ body{
             display: flex;
             gap: 20px;
             align-items: center;
+
+            .btn-secondary:hover{
+                background:  white;
+                color: #000;
+            }
+            .btn-secondary{
+                color: rgb(255, 255, 255);
+            }
+
         }
 
     }
@@ -749,6 +752,7 @@ body{
    ============================ */
 
 .content{
+    padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
