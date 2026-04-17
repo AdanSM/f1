@@ -44,7 +44,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between; /* 👈 clave */
-    padding: 0 40px;
+    padding: 0 15px;
 }
 
 .container-logo{
