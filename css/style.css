@@ -10,6 +10,10 @@ body{
     top: 0;
     margin: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 :root {
 	--color-primary: #ff0000;
 	--color-secondary: #1f2120;
