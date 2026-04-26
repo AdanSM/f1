@@ -966,7 +966,7 @@ position: relative;
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;
-    background-attachment: fixed;  
+    background-attachment: scroll;  
     z-index: 0;
     overflow: hidden; 
 
