@@ -1121,12 +1121,13 @@
 
 .selection-testimonials{
     color: #000;
-    background-image: url(../img/f1\ \(1\)back.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
+    background-image: url("../img/fondo-lineas.png"); 
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
     z-index: 1;
+
 
     display: flex;
     align-items: center;
@@ -1177,7 +1178,7 @@
 
                 p{
                     text-align: center;
-                    font-size: 28px;
+                    font-size: 25px;
                     width: 70%;
                     line-height: 1.5;
                 }
@@ -1190,7 +1191,11 @@
                 }
 
                 h3{
-                    color: var(--color-primary);
+                    color: black;
+                }
+
+                .fa-microphone{
+                    font-size: 25px;
                 }
             }
         }
@@ -1201,10 +1206,9 @@
             justify-content: center;
 
             .btn-carousel {
-                border:1px solid var(--color-primary);
                 background: none;
-                width: 50px;
-                height: 50px;
+                width: 70px;
+                height: 70px;
                 border-radius: 999px;
                 display: flex;
                 justify-content: center;
@@ -1218,28 +1222,39 @@
 
                 i{
                     font-size: 18px;
-                    color: var(--color-primary);
+                    color: rgb(0, 0, 0);
                 }
 
                 &.btn-prev{
                     left: 0;
+                    transition: .7s;
                 }
 
                 &.btn-next{
                     right: 0;
+                    transition: .7s;
                 }
 
                 &:hover{
-                    background-color: var(--color-primary);
+                    background-color:rgba(255, 255, 255, 0.862);
+                    box-shadow:rgb(70, 70, 70) 0 0 10px;
+                    padding: 3.5%;
                     i{
-                        color: var(--color-light);
+                        color: rgb(0, 0, 0);
                     }
+
+
+
                 }
             }
         }
     }
 
     @media (max-width:992px) {
+
+        i {
+            color: rgb(0, 0, 0);
+        }
         .content{
             gap: 10px;
 
@@ -1263,6 +1278,10 @@
     }
 
         @media (max-width:768px) {
+
+        i {
+            color: rgb(0, 0, 0);
+        }
         .content{
 
             h2{
@@ -1283,6 +1302,8 @@
             }
 
             .carousel-wrapper{
+
+                
                 padding-bottom: 50px;
 
                 .btn-carousel{
@@ -1290,6 +1311,8 @@
                     height: 40px;
                     bottom: -20px;
                     top: auto;
+
+                    
 
                 &.btn-prev{
                     left: 40%;
