@@ -586,13 +586,12 @@
             flex-direction: column;
             gap: 15px;
 
-            background: linear-gradient(135deg, #006aff, #0e007a);
+            background: linear-gradient(135deg, #ff0000, #4d0000);
             padding: 15px;
             border-radius: 25px;
             color: var(--color-light);
             font-size: 18px;
 
-            position: absolute;
             bottom: 0;
             right: -10px;
 
@@ -953,8 +952,6 @@
 }
 }
 
-
-
 /* ============================
             TESTIMONIO
    ============================ */
@@ -1027,8 +1024,8 @@ position: relative;
                 }
 
                 img{
-                    width: 60px;
-                    height: 60px;
+                    width: 80px;
+                    height: 80px;
                     border-radius: 999px;
                     object-fit: cover;
                 }
@@ -1081,7 +1078,6 @@ position: relative;
                 &:hover{
                     background-color:rgba(255, 255, 255, 0.862);
                     box-shadow:rgb(70, 70, 70) 0 0 10px;
-                    padding: 3.5%;
                     i{
                         color: rgb(0, 0, 0);
                     }
@@ -1190,7 +1186,6 @@ position: relative;
         }
     }
 }
-
 
 /* ============================
             MEJOR AUTO
