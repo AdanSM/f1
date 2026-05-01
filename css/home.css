@@ -772,7 +772,6 @@
 .container-tabs{
     margin: 0;
     background-color: #ffffff;
-    padding: 10px 20px;
     border-radius: 30px;
 
     display: flex;
@@ -930,7 +929,7 @@
 @media (max-width: 768px){
 
     .container-tabs{
-        padding: 10px 15px;
+        padding: 5px 15px;
         gap: 20px;
     }
 

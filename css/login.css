@@ -31,7 +31,7 @@ form {
     text-align: center;
 }
 
-.input, select {
+input, select {
     width: 100%;
     padding: 12px 16px;
     margin-top: 10px;
@@ -45,7 +45,7 @@ form {
     color: red;
 }
 
-.input:focus, select:focus {
+input:focus, select:focus {
     border-color: #f16363;
     outline: none;
     box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.1);
@@ -77,7 +77,7 @@ legend {
     color: #1f2937;
 }
 
-.btn-login, .input[type="submit"] {
+.btn-login, input[type="submit"] {
     display: block;
     width: 100%;
     padding: 14px 20px;
@@ -93,7 +93,7 @@ legend {
 }
 
 
-.btn-login:hover, .input[type="submit"]:hover {
+.btn-login:hover, input[type="submit"]:hover {
     color: black;
     background-color: #ffffff55;
     transform: translateY(-2px); 
@@ -101,6 +101,7 @@ legend {
 }
 
 
-.btn-login:active, .input[type="submit"]:active {
+.btn-login:active, input[type="submit"]:active {
     transform: translateY(0);
 }
+
