@@ -3,10 +3,12 @@
 @import"header.css";
 @import "nav.css";
 @import "home.css";
+@import"login.css";
+
 body{
     background-color: #001632;
     color: var(--color-light);
-    font-family: F1;
+    font-family: "F1";
     top: 0;
     margin: 0;
 }

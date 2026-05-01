@@ -790,9 +790,9 @@
     bottom: 0;
     left: 0;
     height: 2px; 
-    background-color: #ff0000; 
+    background-color: #000000; 
     border-radius: 10px; 
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); 
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); 
     }
 
@@ -814,10 +814,6 @@
     top: 50%;
     right: -20px;
     transform: translateY(-50%);
-    width: 7px;
-    height: 7px;
-    border-radius: 999px;
-    background-color: #000;
 }
 
 .container-tabs button:last-child::after{
@@ -1363,5 +1359,6 @@ position: relative;
     }
     
 }
+
 
 
