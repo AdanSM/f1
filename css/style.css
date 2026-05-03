@@ -46,6 +46,15 @@ html {
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:linear-gradient(#000b1a,transparent) ; 
+    z-index: 1000;
+}
+
 .container.header-expand{
     display: flex;
     align-items: center;
@@ -76,47 +85,32 @@ html {
     }
 }
 
-.btn{
-    padding: 15px;
+.btn, input[type="submit"] {
     text-decoration: none;
-    padding: 17px 25px;
-    text-transform: capitalize;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 16;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    cursor: pointer;
+    display: block;
+    padding: 14px 20px;
+    background-color: #ff0000; 
+    color: rgb(255, 255, 255);
     border: none;
+    border-radius: 50px; 
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
 
 
-    &.btn-primary{
-        padding: 15px;
-        background-color: var(--color-primary);
-        color: var(--color-light);
-        position: relative;
-
-        &:hover{
-            background-color: var(--color-light);
-            color: var(--dark-color-divider);
-        }
-    }
+.btn:hover, input[type="submit"]:hover {
+    color: black;
+    background-color: #ffffff;
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 5px #8282828f;
+}
 
 
-
-
-        &.btn-secondary{
-        background-color: var(--color-primary);
-        color: var(--dark-color-divider);
-        position: relative;
-
-        &:hover{
-            background-color: var(--color-primary);
-            color: var(--color-light);
-        }
-    }
+.btn:active, input[type="submit"]:active {
+    transform: translateY(0);
 }
 
 
