@@ -94,7 +94,6 @@ header {
     border: none;
     border-radius: 50px; 
     font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 20px;
@@ -104,8 +103,7 @@ header {
 .btn:hover, input[type="submit"]:hover {
     color: black;
     background-color: #ffffff;
-    transform: translateY(-2px); 
-    box-shadow: 0 5px 5px #8282828f;
+    transform: translateY(-5px); 
 }
 
 
