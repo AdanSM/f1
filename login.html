@@ -9,49 +9,51 @@
 </head>
 <body>
 
-<form> 
+<form id="registerForm">
     <div class="form-titulo">
-        <img class="form-img" src="img/f1-logo.png" alt="">
-            <h2 class="h2">Inicio de sesión</h2>
-            </div>
-        <fieldset>
-            <legend>Información personal</legend>
+        <img class="form-img" src="img/f1-logo.png" alt="Logo F1">
+        <h2 class="h2">Inicio de sesión / Registro</h2>
+    </div>
+
+    <fieldset>
+        <legend>Información personal</legend>
+        
         <div class="form"> 
             <label for="Nombre">Nombre
-                <input class="input"class="input"class="input"type="text" placeholder="Nombre" id="Nombre">
+                <input class="input" type="text" placeholder="Nombre" id="Nombre" required>
             </label>
         </div>
 
         <div class="form"> 
             <label class="label" for="Apellido">Apellido
-                <input class="input"class="input"class="input"type="text" placeholder="Apellido" id="Apellido">
+                <input class="input" type="text" placeholder="Apellido" id="Apellido" required>
             </label>
         </div>
 
         <div class="form"> 
             <label for="Edad">Edad
-                <input class="input"class="input"class="input"type="number" placeholder="Edad" id="Edad">
+                <input class="input" type="number" placeholder="Edad" id="Edad" required>
             </label>
         </div>
 
         <div class="form"> 
             <label for="Email">Correo
-                <input class="input" class="input"class="input" type="email" placeholder="Ejemplo@gmail.com" id="Email">
+                <input class="input" type="email" placeholder="Ejemplo@gmail.com" id="Email" required>
             </label>
         </div>
         
         <div class="form">
-            <label for="password"> Contraseña
-                <input class="input"class="input"class="input"type="password" placeholder="Tu Contraseña" id="password">
+            <label for="password">Contraseña
+                <input class="input" type="password" placeholder="Tu Contraseña" id="password" required>
             </label>
         </div>
-
-        </fieldset>
-        
-        <div class="btn-sign-in"> 
-            <button class="btn-login">Iniciar</button>
-        </div>
+    </fieldset>
+    
+    <div class="btn-sign-in"> 
+        <button type="submit" class="btn-login">Registrarse</button>
+    </div>
 </form>
+<script src="js/login.js"></script>
 
 </body>
 </html>
