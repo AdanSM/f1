@@ -6,7 +6,7 @@
 @import"login.css";
 
 body{
-    background-color: #001632;
+    background-color: #151515;
     color: var(--color-light);
     font-family: "F1";
     top: 0;
@@ -51,7 +51,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background:linear-gradient(#000b1a,transparent) ; 
+    background:linear-gradient(#000000,transparent) ; 
     z-index: 1000;
 }
 
