@@ -4,6 +4,7 @@
 @import "nav.css";
 @import "home.css";
 @import"login.css";
+@import "auth.css";
 
 body{
     background-color: #151515;
@@ -53,7 +54,10 @@ header {
     width: 100%;
     background:linear-gradient(#000000,transparent) ; 
     z-index: 1000;
+
+
 }
+
 
 .container.header-expand{
     display: flex;
@@ -94,6 +98,7 @@ header {
     border: none;
     border-radius: 50px; 
     font-size: 16px;
+    font-family: 'F1';
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 20px;

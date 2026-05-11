@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="img/icones-d-administration-rouge.png" type="image/x-icon">
+    <script src="/js/register.js" defer></script>
+    
+</head>
+<body>
+
+<form id="authForm">
+    <div class="form-titulo">
+        <img class="form-img" src="img/f1-logo.png" alt="Logo F1">
+        <h2 class="h2" id="formTitle">Registrarse</h2>
+    </div>
+
+    <fieldset>
+        <legend id="legendTitle">Información de Registro</legend>
+        
+        <div class="form"> 
+            <label for="Nombre">Nombre
+                <input class="input" type="text" placeholder="Nombre" id="Nombre" required>
+            </label>
+        </div>
+
+        <div id="extraFields">
+            <div class="form"> 
+                <label class="label" for="Apellido">Apellido
+                    <input class="input" type="text" placeholder="Apellido" id="Apellido" required>
+                </label>
+            </div>
+
+            <div class="form"> 
+                <label for="Edad">Edad
+                    <input class="input" type="number" placeholder="Edad" id="Edad" required>
+                </label>
+            </div>
+
+            <div class="form"> 
+                <label for="Email">Correo
+                    <input class="input" type="email" placeholder="Ejemplo@gmail.com" id="Email" required>
+                </label>
+            </div>
+        </div>
+        
+        <div class="form">
+            <label for="password">Contraseña
+                <input class="input" type="password" placeholder="Tu Contraseña" id="password" required>
+            </label>
+        </div>
+    </fieldset>
+    
+    <div class="btn-sign-in"> 
+        <button type="submit" class="btn-login" id="submitBtn">Registrarse</button>
+    </div>
+
+    <div class="toggle-container" style="text-align: center; margin-top: 15px;">
+        <a href="/login.html" id="toggleAuthMode" class="btn-secondary-login">
+            Inicio de Sesión
+        </a>
+    </div>
+</form>
+
+</body>
+</html>

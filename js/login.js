@@ -1,30 +1,38 @@
-const registerForm = document.getElementById('registerForm');
+document.addEventListener('DOMContentLoaded', () => {
+    const authForm = document.getElementById('authForm');
 
-registerForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    if (authForm) {
+        authForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-    // Captura de datos
-    const userData = {
-        nombre: document.getElementById('Nombre').value,
-        apellido: document.getElementById('Apellido').value,
-        edad: document.getElementById('Edad').value,
-        email: document.getElementById('Email').value,
-        password: document.getElementById('password').value
-    };
+            const Nombre = document.getElementById('Nombre').value.trim();
+            const password = document.getElementById('password').value.trim();
 
-    // Envío al servidor
-    const response = await fetch('http://localhost:3000/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(userData)
-    });
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ Nombre, password })
+                });
 
-    const result = await response.json();
-    
-    if (response.ok) {
-        alert("¡Registro exitoso!");
-        window.location.href = 'index.html';
-    } else {
-        alert("Error: " + result.message);
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Save token in localStorage
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    
+                    alert('Inicio de sesión exitoso.');
+                    window.location.href = '/index.html';
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Ocurrió un error al intentar iniciar sesión.');
+            }
+        });
     }
 });

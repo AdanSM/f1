@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1778466393105,
+    "Nombre": "a",
+    "Apellido": "santos",
+    "Edad": "21",
+    "Email": "adansantos1100@gmail.com",
+    "password": "$2b$10$hVy/LvdD829tCXqZ9z2D/utUmCA5AJIyT1PUoYzsAXSWBaB4DsP.2"
+  },
+  {
+    "id": 1778466435750,
+    "Nombre": "adan",
+    "Apellido": "santos",
+    "Edad": "21",
+    "Email": "adansantos1100@gmeail.com",
+    "password": "$2b$10$Prd2VNtR0mne/3At1x5hLOR4YKGZA5FlPTJ69u.Mj1L5k6Kt4P3A2"
+  },
+  {
+    "id": 1778466644103,
+    "Nombre": "ADANsm",
+    "Apellido": "santos",
+    "Edad": "21",
+    "Email": "adansm10@icloud.com",
+    "password": "$2b$10$ONWEZ4eMg8VPzCMICd8HbunPdZyd4KwM5dK2DveRulkCMZ9JtoF9q"
+  }
+]

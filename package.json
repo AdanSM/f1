@@ -1,0 +1,31 @@
+{
+  "name": "f1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "dev": "nodemon --exec node app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdanSM/f1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AdanSM/f1/issues"
+  },
+  "homepage": "https://github.com/AdanSM/f1#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

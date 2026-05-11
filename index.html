@@ -14,8 +14,7 @@
   <header>
     <div class="container header-expand">
       <div class="container-logo">
-
-        <li> <a href="#"><img src="img/f1-logo.png" alt="logo"></a></li>
+        <a href="#" class="logo-f1"><img src="img/f1-logo.png" alt="logo"></a>
         <span></span>
       </div>
 
@@ -30,8 +29,8 @@
       </nav>
 
 <div id="auth-container">
-    <a href="login.html" class="btn btn-primary">
-        Inicio de Sesion <i class="fa-solid fa-arrow-right"></i>
+    <a href="register.html" class="btn btn-primary" target="_blank" style="display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-user"></i> <span class="auth-text">Registro</span>
     </a>
 </div>
 
@@ -43,7 +42,7 @@
       <div class="menu-responsive">
         <ul>
           <li> <a href="#">inicio</a></li>
-          <li> <a href="login.html" target="_blank">Inicio de sesión</a></li>
+          <li> <a href="register.html" target="_blank">Registro</a></li>
           <li> <a href="#mejor-piloto">Mejor Piloto de la Temporada</a></li>
           <li> <a href="#estadisticas">Estadisticas</a></li>
           <li> <a href="#monoplaza">Monoplaza</a></li>
@@ -726,6 +725,11 @@ Lewis Hamilton reconoció que Mercedes-AMG Petronas Formula One Team aún no dom
   </div>
 </section>
 
+
+
+
+
+
 <!--FOOTER-->
 <section class="footer">
 <footer class="f1-footer">
@@ -779,7 +783,7 @@ Lewis Hamilton reconoció que Mercedes-AMG Petronas Formula One Team aún no dom
       <div class="footer-col">
         <h4>Cuenta</h4>
         <ul>
-          <li><a href="login.html">Iniciar Sesión</a></li>
+          <li><a href="register.html" target="_blank">Registrarse</a></li>
         </ul>
       </div>
     </div>
@@ -798,6 +802,7 @@ Lewis Hamilton reconoció que Mercedes-AMG Petronas Formula One Team aún no dom
 </section>
 
 
+  <script src="js/auth_state.js"></script>
   <script src="js/header.js"></script>
   <script src="js/home.js"></script>
   <script src="js/testimonio.js"></script>

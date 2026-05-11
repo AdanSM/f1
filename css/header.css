@@ -141,8 +141,22 @@ nav {
             flex: 1;
             }
 
-            nav,
-            .btn-primary{
+            nav {
+                display: none;
+            }
+
+            .btn-primary {
+                margin-top: 0;
+                padding: 10px 14px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                width: 40px;
+            }
+            
+            .auth-text {
                 display: none;
             }
 
