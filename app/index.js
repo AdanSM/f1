@@ -1,9 +1,16 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import fs from 'fs/promises';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+
+// Modelos
+import User from './models/User.js';
+
+// Configurar variables de entorno
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -11,7 +18,7 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 const SECRET_KEY = process.env.JWT_SECRET || 'supersecretkey123';
-const USERS_FILE = join(__dirname, 'users.json');
+const MONGO_URI = process.env.MONGO_URI; 
 
 // Middleware
 app.use(express.json());
@@ -29,17 +36,11 @@ app.post('/api/register', async (req, res) => {
             return res.status(400).json({ message: 'Todos los campos son obligatorios.' });
         }
 
-        // Leer usuarios existentes
-        let users = [];
-        try {
-            const data = await fs.readFile(USERS_FILE, 'utf-8');
-            users = JSON.parse(data);
-        } catch (error) {
-            // Si el archivo no existe o está vacío, continuamos con el array vacío
-        }
+        // Comprobar si el usuario ya existe en MongoDB
+        const userExists = await User.findOne({ 
+            $or: [{ Email: Email }, { Nombre: Nombre }] 
+        });
 
-        // Comprobar si el usuario ya existe
-        const userExists = users.find(u => u.Email === Email || u.Nombre === Nombre);
         if (userExists) {
             return res.status(400).json({ message: 'El correo o el nombre de usuario ya está registrado.' });
         }
@@ -49,18 +50,16 @@ app.post('/api/register', async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt);
 
         // Crear nuevo usuario
-        const newUser = {
-            id: Date.now(),
+        const newUser = new User({
             Nombre,
             Apellido,
             Edad,
             Email,
             password: hashedPassword
-        };
+        });
 
-        // Guardar
-        users.push(newUser);
-        await fs.writeFile(USERS_FILE, JSON.stringify(users, null, 2));
+        // Guardar en la base de datos
+        await newUser.save();
 
         res.status(201).json({ message: 'Usuario registrado exitosamente.' });
     } catch (error) {
@@ -78,17 +77,11 @@ app.post('/api/login', async (req, res) => {
             return res.status(400).json({ message: 'Nombre y contraseña son requeridos.' });
         }
 
-        // Leer usuarios
-        let users = [];
-        try {
-            const data = await fs.readFile(USERS_FILE, 'utf-8');
-            users = JSON.parse(data);
-        } catch (error) {
-            return res.status(500).json({ message: 'Error al leer la base de datos de usuarios.' });
-        }
-
         // Buscar usuario (por nombre o email)
-        const user = users.find(u => u.Nombre === Nombre || u.Email === Nombre);
+        const user = await User.findOne({ 
+            $or: [{ Nombre: Nombre }, { Email: Nombre }] 
+        });
+
         if (!user) {
             return res.status(400).json({ message: 'Credenciales inválidas.' });
         }
@@ -101,16 +94,16 @@ app.post('/api/login', async (req, res) => {
 
         // Generar token JWT
         const token = jwt.sign(
-            { id: user.id, Nombre: user.Nombre },
+            { id: user._id, Nombre: user.Nombre },
             SECRET_KEY,
-            { expiresIn: '1h' }
+            { expiresIn: '7d' }
         );
 
         res.json({
             message: 'Inicio de sesión exitoso.',
             token,
             user: {
-                id: user.id,
+                id: user._id,
                 Nombre: user.Nombre,
                 Email: user.Email
             }
@@ -121,7 +114,24 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
-// Iniciar servidor
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+// Conectar a MongoDB y luego iniciar el servidor
+if (!MONGO_URI) {
+    console.error('ERROR: No se ha configurado MONGO_URI en las variables de entorno (.env).');
+    console.log('El servidor intentará iniciarse de todas formas para servir la página estática, pero el registro fallará.');
+    
+    app.listen(PORT, () => {
+        console.log(`Servidor corriendo sin base de datos en http://localhost:${PORT}`);
+    });
+} else {
+    mongoose.connect(MONGO_URI)
+        .then(() => {
+            console.log('Conectado exitosamente a MongoDB');
+            app.listen(PORT, () => {
+                console.log(`Servidor corriendo en http://localhost:${PORT}`);
+            });
+        })
+        .catch((error) => {
+            console.error('Error al conectar a MongoDB:', error);
+            process.exit(1);
+        });
+}

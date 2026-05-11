@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: f1-web
+    env: node
+    buildCommand: npm install
+    startCommand: node app/index.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        value: secreto_f1_super_seguro
