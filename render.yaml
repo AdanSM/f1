@@ -2,6 +2,7 @@ services:
   - type: web
     name: f1-web
     env: node
+    plan: free
     buildCommand: npm install
     startCommand: node app/index.js
     envVars:
