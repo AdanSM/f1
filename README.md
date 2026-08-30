@@ -1,4 +1,4 @@
-# F1 2025 🏎️
+# F1 2025 
 
 Sitio web dedicado a la temporada 2025 de Fórmula 1, con landing informativa,
 sistema de autenticación y backend propio en Node.js.
